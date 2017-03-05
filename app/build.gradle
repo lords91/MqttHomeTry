@@ -23,6 +23,12 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+    }
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -32,4 +38,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('src/httpclient-4.5.3.jar')
     compile files('src/httpcore-4.4.6.jar')
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.3-SNAPSHOT'
+    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.0.3-SNAPSHOT'
 }
